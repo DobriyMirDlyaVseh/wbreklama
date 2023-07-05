@@ -1,19 +1,17 @@
 # wbreklama
-A project for advertising management based on React 16, React-Redux & Material-UI 4
+Проект по управлению рекламой на основе React 16, React-Redux & Material-UI 4.
 
-This is the very first version.
+Целью этого проекта являлось создание интерефейса для управления рекламой в любом бизнесе. Для достижения этой цели было разработано решение, которое  включает простой процесс аутентификации,  API с поддержкой токенов и элегантный дизайн пользовательского интерфейса.
 
-The goal of this starter project is to create project for adveritising management. To achieve this target, we need a solution which should include simple authentication process, restful API with token support and elegant UI design.
+## Реализация
+Этот проект построен на базе React/Redux.
+Компонент пользовательского интерфейса в основном построен на Material-UI.
+Этот проект использует Redux-Thunk для поддержки внутреннего API.
+Использование Formik для управления отправкой формы
+Интеграция со storybook для реагирования.
+Проект построен на TypeScript 3.x.
 
-## Features
-This project is built on the top of React/Redux.
-The UI component are mainly built on Material-UI.
-This project uses Redux-Thunk to support back-end API.
-Use Formik to manage the form submission
-Integrate with storybook for react.
-The project is built on TypeScript 3.x.
-
-## Build Setup
+## Настройка сборки
 install the packages with npm
 cd react-crm npm install
 
@@ -39,8 +37,8 @@ npm run build
 Run / Test release without building new image
 npm run build
 
-## Welcome to fork or clone
-For detailed explanation on how things work, checkout following links please.
+## Добро пожаловать в форк или клон
+Для подробного объяснения того, как все работает, посмотрите следующие материалы:
 
 React
 Redux
