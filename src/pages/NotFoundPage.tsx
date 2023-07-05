@@ -8,12 +8,12 @@ const NotFoundPage = () => {
   return (
     <div>
       <div style={{ paddingTop: 200, margin: "auto", width: "50%" }}>
-        <h1> Page Not Found</h1>
+        <h1> Страница не найдена</h1>
         <br />
 
         <Link to="/dashboard">
           <Button variant="contained" color="primary">
-            <ArrowBackIosIcon /> Home{" "}
+            <ArrowBackIosIcon /> Главная{" "}
           </Button>
         </Link>
       </div>

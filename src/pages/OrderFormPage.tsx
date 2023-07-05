@@ -63,7 +63,7 @@ interface OrderFormState {
   snackbarOpen: boolean;
   autoHideDuration: number;
   productId: number;
-  dialogText: string; 
+  dialogText: string;
   productList: Product[];
   product: Product;
 }
@@ -88,7 +88,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
     autoHideDuration: 2000,
     productId: null,
     productList: [],
-    dialogText: "Are you sure to do this?",
+    dialogText: "Вы уверены, что хотите сделать это?",
     product: {} as Product,
   };
 
@@ -163,7 +163,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
   }
 
   handleOpen(id) {
-    this.setState({ dialogText: "Are you sure to delete this data?" });
+    this.setState({ dialogText: "Удалить эти данные?" });
     this.setState({ open: true });
     this.setState({ productId: id });
   }
@@ -193,7 +193,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
     const { isFetching, order, categoryList, productList } = this.props;
 
     return (
-      <PageBase title="Order" navigation="Application / Order ">
+      <PageBase title="Заказ" navigation="Приложение / Заказ ">
         {isFetching ? (
           <div>
             <SkeletonForm withList={true} />
@@ -229,9 +229,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Customer"
-                      label="Customer"
-                      name="customer.firstname"
+                      placeholder="Заказчик"
+                      label="Заказчик"
+                      name="заказчик.имя"
                       disabled
                       fullWidth={true}
                       required
@@ -241,9 +241,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Reference"
-                      label="Reference Number"
-                      name="reference"
+                      placeholder="Ссылка"
+                      label="Номер Ссылки"
+                      name="ссылка"
                       fullWidth={true}
                       required
                     />
@@ -253,10 +253,10 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Amount"
-                      label="Amount"
+                      placeholder="Сумма"
+                      label="Сумма"
                       fullWidth={true}
-                      name="price"
+                      name="цена"
                       required
                     />
                   </Grid>
@@ -265,11 +265,11 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Quantity"
-                      label="Quantity"
+                      placeholder="Количество"
+                      label="Количество"
                       fullWidth={true}
                       type="number"
-                      name="products.length"
+                      name="товары.длина"
                       required
                       disabled
                     />
@@ -279,10 +279,10 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                       variant="outlined"
                       component={TextField}
                       id="orderDate"
-                      placeholder="Order Date"
-                      label="Order Date"
+                      placeholder="Дата заказа"
+                      label="Дата заказа"
                       type="date"
-                      name="orderDate"
+                      name="дата заказа"
                       style={styles.textField}
                       InputLabelProps={{
                         shrink: true,
@@ -295,10 +295,10 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                       variant="outlined"
                       component={TextField}
                       id="shippedDate"
-                      placeholder="Shipped Date"
-                      label="Shipped Date"
+                      placeholder="Дата отправки"
+                      label="Дата отправки"
                       type="date"
-                      name="shippedDate"
+                      name="дата отправки"
                       style={styles.textField}
                       InputLabelProps={{
                         shrink: true,
@@ -310,9 +310,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Address"
-                      label="Address"
-                      name="shipAddress.address"
+                      placeholder="Адрес"
+                      label="Адрес"
+                      name="адрес отгрузки.адрес"
                       fullWidth={true}
                       required
                     />
@@ -322,9 +322,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="City"
-                      label="City"
-                      name="shipAddress.city"
+                      placeholder="Город"
+                      label="Город"
+                      name="адрес отгрузки.город"
                       fullWidth={true}
                       required
                     />
@@ -334,9 +334,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Country"
-                      label="Country"
-                      name="shipAddress.country"
+                      placeholder="Страна"
+                      label="Страна"
+                      name="адрес отгрузки.страна"
                       fullWidth={true}
                       required
                     />
@@ -346,9 +346,9 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Zip Code"
-                      label="Zip Code"
-                      name="shipAddress.zipcode"
+                      placeholder="Почтовый индекс"
+                      label="Почтовый индекс"
+                      name="адрес отгрузки.почтовый индекс"
                       fullWidth={true}
                       value={
                         order.shipAddress && order.shipAddress.zipcode
@@ -370,7 +370,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                         <ListItem key={index}>
                           <ListItemText
                             primary={product.name}
-                            secondary={`Price: $ ${product.unitPrice}`}
+                            secondary={`Цена: Руб. ${product.unitPrice}`}
                           />
                           <IconButton
                             onClick={() => this.removeProduct(product)}
@@ -388,7 +388,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                 <div style={styles.buttons}>
                   <Link to="/orders">
                     <Button variant="contained">
-                      <ArrowBackIosIcon /> Back{" "}
+                      <ArrowBackIosIcon /> Назад{" "}
                     </Button>
                   </Link>
                   <Button
@@ -398,7 +398,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     color="primary"
                     disabled={isSubmitting}
                   >
-                    <SaveIcon /> Save
+                    <SaveIcon /> Сохранить
                   </Button>
                   <Button
                     variant="contained"
@@ -406,13 +406,13 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     onClick={this.addProduct}
                     color="secondary"
                   >
-                    <ContentCreate /> Add
+                    <ContentCreate /> Добавить
                   </Button>
                 </div>
 
                 <React.Fragment>
                   <Dialog
-                    title="Add Product"
+                    title="Добавить товар"
                     open={this.state.open}
                     maxWidth="xs"
                     fullWidth
@@ -426,7 +426,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
                     >
                       <Select
                         style={{ width: 200, marginRight: 10 }}
-                        label="Categories"
+                        label="Категории"
                         name="categoryId"
                       >
                         {categoryList.map((category, index) => (
@@ -438,7 +438,7 @@ class OrderFormPage extends React.Component<OrderFormProps, OrderFormState> {
 
                       <Select
                         style={{ width: 200 }}
-                        label="Products"
+                        label="Товары"
                         name="categoryId"
                         onChange={this.onSelectProduct}
                       >

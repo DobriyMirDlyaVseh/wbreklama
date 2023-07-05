@@ -64,7 +64,7 @@ const SignInPage: React.FC<SignInPageProps> = ({
         <div style={styles.loginContainer}>
           <Paper style={styles.paper}>
             <p style={styles.formHeader}>WbReklama</p>
-            <p style={styles.ListSubheader}>Version 2.1.1</p>
+            <p style={styles.ListSubheader}>Версия 2.1.1</p>
             <Formik
               initialValues={{
                 username: 'admin@test.com',
@@ -75,7 +75,7 @@ const SignInPage: React.FC<SignInPageProps> = ({
                 if (!values.username) {
                   errors.username = 'Required';
                 } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.username)) {
-                  errors.username = 'Invalid email address';
+                  errors.username = 'Неверный адрес почты';
                 }
 
                 if (!values.password) {
@@ -95,7 +95,7 @@ const SignInPage: React.FC<SignInPageProps> = ({
                       variant="outlined"
                       component={TextField}
                       placeholder="test@test.com"
-                      name="username"
+                      name="никнейм"
                       label="Login ID"
                       fullWidth={true}
                       required
@@ -106,9 +106,9 @@ const SignInPage: React.FC<SignInPageProps> = ({
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Password"
-                      name="password"
-                      label="Password"
+                      placeholder="Пароль"
+                      name="пароль"
+                      label="Пароль"
                       fullWidth={true}
                       type="password"
                       required

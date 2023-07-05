@@ -36,7 +36,7 @@ const NewOrders = (props : NewOrdersProps )=> {
 
   return (
     <Paper style={styles.paper}>
-      <div style={{ ...styles.header }}>New Orders</div>
+      <div style={{ ...styles.header }}>Новые заказы</div>
       <div style={styles.div}>
         <ResponsiveContainer>
           <LineChart data={props.data}>

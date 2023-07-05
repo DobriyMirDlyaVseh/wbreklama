@@ -19,7 +19,7 @@ const RecentlyProducts = (props) => {
   const styles = {
     ListSubheader: {
       fontSize: 24,
-      fontWeight: 500, 
+      fontWeight: 500,
       backgroundColor: cyan600,
       color: white,
     },
@@ -35,7 +35,7 @@ const RecentlyProducts = (props) => {
     <Paper>
       <List>
         <ListSubheader style={styles.ListSubheader}>
-          Recent Products
+          Последние товары
         </ListSubheader>
         {props.data.map((item) => (
           <div key={item.title}>

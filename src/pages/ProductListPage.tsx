@@ -25,7 +25,7 @@ const styles = listPageStyle;
 const defaultProps = {
   model: 'product',
   dataKeys: ['name', 'category.name', 'unitPrice', 'numInStock','actions'],
-  headers: ['Product Name', 'Category Name', 'Price', 'Total In Stock', 'Actions'],
+  headers: ['Название товара', 'Название категории', 'Цена', 'Итого на складе', 'Действия'],
 };
 
 type DefaultProps = typeof defaultProps;
@@ -110,7 +110,7 @@ class ProductListPage extends React.Component<ProductListProps, ProductListState
       const isFetching = this.props.isFetching;
       this.setState({ page, totalPages, items, isFetching });
     }
-    
+
 
     if (this.props.deleted !== prevProps.deleted && this.props.deleted === true) {
       this.setState({ snackbarOpen: true });
@@ -196,7 +196,7 @@ class ProductListPage extends React.Component<ProductListProps, ProductListState
     const { isFetching, page, totalPages, items } = this.state;
 
     return (
-      <PageBase title={'Products (' + productList.length + ')'} navigation="React CRM / Product">
+      <PageBase title={'Товары (' + productList.length + ')'} navigation="ЦРМ / Товар">
         {isFetching ? (
           <div>
             <SkeletonList />
@@ -211,7 +211,7 @@ class ProductListPage extends React.Component<ProductListProps, ProductListState
             </Fab>
             <Snackbar open={this.state.snackbarOpen} autoHideDuration={this.state.autoHideDuration} onClose={this.onSnackBarClose}>
               <Alert onClose={this.onSnackBarClose} severity="success">
-                The operation completed successfully !
+                Операция завершена успешно !
               </Alert>
             </Snackbar>
             <DataTable
@@ -234,9 +234,9 @@ class ProductListPage extends React.Component<ProductListProps, ProductListState
                 </Grid>
                 <Grid item xs={12} style={styles.searchField}>
                   <TextField
-                    placeholder="Product Name"
-                    label="Product Name"
-                    name="name"
+                    placeholder="Название товара"
+                    label="Название тоара"
+                    name="название"
                     fullWidth={true}
                     value={this.state.search.contain.name}
                     onChange={this.handleSearchFilter}
@@ -244,10 +244,10 @@ class ProductListPage extends React.Component<ProductListProps, ProductListState
                 </Grid>
                 <Grid item xs={12} style={styles.searchField}>
                   <Button variant="contained"    style={styles.searchButton} onClick={this.handleSearch} color="secondary">
-                    Search
+                    Поиск
                   </Button>
                   <Button variant="contained"    style={styles.searchButton} onClick={this.clearSearchFilter} color="default" >
-                      Cancel
+                      Отменить
                     </Button>
                 </Grid>
               </Grid>

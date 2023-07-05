@@ -88,7 +88,7 @@ class ProductFormPage extends React.Component<
 
   onSave(values: TODO) {
     const product = { ...this.state.product, ...values };
-    let action: ApiAction; 
+    let action: ApiAction;
     if (product.id > 0) {
       action = getAction(UPDATE_PRODUCT, null, product) as ApiAction;
     } else {
@@ -101,7 +101,7 @@ class ProductFormPage extends React.Component<
     const { categoryList, product, isFetching } = this.props;
 
     return (
-      <PageBase title="Product" navigation="Application / Product ">
+      <PageBase title="Товар" navigation="Приложение / Товар ">
         {isFetching ? (
           <div>
             <SkeletonForm />
@@ -137,8 +137,8 @@ class ProductFormPage extends React.Component<
                       select
                       component={TextField}
                       as="select"
-                      label="Category"
-                      placeholder="Category"
+                      label="Категория"
+                      placeholder="Категория"
                       variant="outlined"
                       fullWidth={true}
                       name="categoryId"
@@ -157,9 +157,9 @@ class ProductFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Product"
-                      label="Product"
-                      name="name"
+                      placeholder="Товар"
+                      label="Товар"
+                      name="название"
                       fullWidth={true}
                       required
                     />
@@ -169,11 +169,11 @@ class ProductFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Price"
-                      label="Price"
+                      placeholder="Цена"
+                      label="Цена"
                       fullWidth={true}
                       type="number"
-                      name="unitPrice"
+                      name="цена за единицу товара"
                       required
                     />
                   </Grid>
@@ -181,8 +181,8 @@ class ProductFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Quantity"
-                      label="Quantity"
+                      placeholder="Количество"
+                      label="Количество"
                       fullWidth={true}
                       type="number"
                       name="numInStock"
@@ -216,7 +216,7 @@ class ProductFormPage extends React.Component<
                     color="primary"
                     disabled={isSubmitting}
                   >
-                    <SaveIcon /> Save
+                    <SaveIcon /> Сохранить
                   </Button>
                 </div>
                 <Snackbar
@@ -225,7 +225,7 @@ class ProductFormPage extends React.Component<
                   onClose={this.onSnackBarClose}
                 >
                   <Alert onClose={this.onSnackBarClose} severity="success">
-                    The operation completed successfully !
+                    Операция завершена успешно !
                   </Alert>
                 </Snackbar>
               </Form>

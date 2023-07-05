@@ -80,18 +80,18 @@ function DataTable<DataTableProps>({
     } else if (dataKey === "actions") {
       return (
         <>
-          <Tooltip title="Edit" aria-label="edit">
+          <Tooltip title="Редактировать" aria-label="edit">
             <Fab
               size="small"
               style={styles.editButton}
-              // ?path=/story/ is used for storybook 
-              href={ model 
+              // ?path=/story/ is used for storybook
+              href={ model
                 && model.includes("?path=/story/") ?`${model}`: `${model}/${data.id}`}
             >
               <ContentCreate />
             </Fab>
           </Tooltip>
-          <Tooltip title="Delete" aria-label="delete">
+          <Tooltip title="Удалить" aria-label="delete">
             <Fab
               size="small"
               style={styles.deleteButton}
@@ -150,7 +150,7 @@ function DataTable<DataTableProps>({
           ) : (
             <TableRow>
               <TableCell colSpan={headerCount}>
-                <p style={{ textAlign: "center" }}>No Data Found !</p>
+                <p style={{ textAlign: "center" }}>Не найдено данных !</p>
               </TableCell>
             </TableRow>
           )}

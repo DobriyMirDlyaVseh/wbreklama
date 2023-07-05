@@ -75,13 +75,13 @@ const withMenu = ({
     <MenuItem onClick={signoutClick}>
       <SettingsPower />
       <Typography style={{ paddingLeft: "1em" }} variant="inherit">
-        Sign Out
+        Выход
       </Typography>
     </MenuItem>
     <MenuItem onClick={changePassClick}>
       <VpnKey />
       <Typography style={{ paddingLeft: "1em" }} variant="inherit">
-        Change Password
+        Изменить пароль
       </Typography>
     </MenuItem>
   </Menu>
@@ -104,7 +104,7 @@ export default function AppUserMenu<AppUserMenuProps>({
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
   const signoutClick = (event: React.ChangeEvent<unknown>) => {
     event.preventDefault();
     onSignoutClick();

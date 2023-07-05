@@ -120,7 +120,7 @@ class CustomerFormPage extends React.Component<
     const { isFetching, customer } = this.props;
 
     return (
-      <PageBase title="Customer" navigation="Application / Customer ">
+      <PageBase title="Заказчик" navigation="Приложение / Заказчик ">
         {isFetching ? (
           <div>
             <SkeletonForm />
@@ -140,7 +140,7 @@ class CustomerFormPage extends React.Component<
               } else if (
                 !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
               ) {
-                errors.email = "Invalid email address";
+                errors.email = "Неверный адрес почты";
               }
               return errors;
             }}
@@ -159,9 +159,9 @@ class CustomerFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="First Name"
-                      label="First Name"
-                      name="firstname"
+                      placeholder="Имя"
+                      label="Имя"
+                      name="имя"
                       fullWidth={true}
                       required
                     />
@@ -170,10 +170,10 @@ class CustomerFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Last Name"
-                      label="Last Name"
+                      placeholder="Фамилия"
+                      label="Фамилия"
                       fullWidth={true}
-                      name="lastname"
+                      name="фамилия"
                       required
                     />
                   </Grid>
@@ -181,11 +181,11 @@ class CustomerFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Rewards"
-                      label="Rewards"
+                      placeholder="Вознаграждения"
+                      label="Вознаграждения"
                       fullWidth={true}
                       type="number"
-                      name="rewards"
+                      name="вознаграждения"
                       required
                     />
                   </Grid>
@@ -194,10 +194,10 @@ class CustomerFormPage extends React.Component<
                     <Field
                       variant="outlined"
                       component={TextField}
-                      placeholder="Email"
-                      label="Email"
+                      placeholder="Почта"
+                      label="Почта"
                       fullWidth={true}
-                      name="email"
+                      name="почта"
                       required
                     />
                   </Grid>
@@ -206,10 +206,10 @@ class CustomerFormPage extends React.Component<
                       variant="outlined"
                       component={TextField}
                       placeholder="555-555-555"
-                      label="Mobile"
+                      label="Мобильный телефон"
                       fullWidth={true}
                       type="string"
-                      name="mobile"
+                      name="мобильный телефон"
                       required
                     />
                   </Grid>
@@ -218,7 +218,7 @@ class CustomerFormPage extends React.Component<
                       <Switch
                         checked={customer.membership}
                         color="primary"
-                        name="membership"
+                        name="членство"
                         inputProps={{ "aria-label": "membership" }}
                       />
                     )}
@@ -238,7 +238,7 @@ class CustomerFormPage extends React.Component<
                 <div style={styles.buttons}>
                   <Link to="/customers">
                     <Button variant="contained">
-                      <ArrowBackIosIcon /> Back{" "}
+                      <ArrowBackIosIcon /> Назад{" "}
                     </Button>
                   </Link>
                   <Button
@@ -248,7 +248,7 @@ class CustomerFormPage extends React.Component<
                     color="primary"
                     disabled={isSubmitting}
                   >
-                    <SaveIcon /> Save
+                    <SaveIcon /> Сохранить
                   </Button>
                 </div>
                 <Snackbar
@@ -257,7 +257,7 @@ class CustomerFormPage extends React.Component<
                   onClose={this.onSnackBarClose}
                 >
                   <Alert onClose={this.onSnackBarClose} severity="success">
-                    The operation completed successfully !
+                    Операция успешно завершена !
                   </Alert>
                 </Snackbar>
               </Form>

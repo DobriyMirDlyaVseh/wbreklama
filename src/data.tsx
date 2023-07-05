@@ -16,29 +16,29 @@ const purple600 = purple['600'];
 
 const data = {
   menus: [
-    { text: "DashBoard", icon: <Assessment />, link: "/dashboard" },
-    { text: "Customer", icon: <PermIdentity />, link: "/customers" },
-    { text: "Order", icon: <ShoppingCartOutlinedIcon />, link: "/orders" },
-    { text: "Product", icon: <StoreOutlinedIcon />, link: "/products" },
-    { text: "About", icon: <InfoOutlinedIcon />, link: "/about" }
+    { text: "Панель управления", icon: <Assessment />, link: "/dashboard" },
+    { text: "Заказчик", icon: <PermIdentity />, link: "/customers" },
+    { text: "Заказ", icon: <ShoppingCartOutlinedIcon />, link: "/orders" },
+    { text: "Товар", icon: <StoreOutlinedIcon />, link: "/products" },
+    { text: "О", icon: <InfoOutlinedIcon />, link: "/about" }
   ],
   userMenus: [
-    { text: "Sign out", icon: <SettingsPower />, link: "/login" },
-    { text: "Change password", icon: <VpnKey />, link: "" }
+    { text: "Выход", icon: <SettingsPower />, link: "/login" },
+    { text: "Изменить пароль", icon: <VpnKey />, link: "" }
   ],
   tablePage: {
     items: [
-      { id: 1, name: "Product 1", price: "$50.00", category: "Category 1" },
-      { id: 2, name: "Product 2", price: "$150.00", category: "Category 2" },
-      { id: 3, name: "Product 3", price: "$250.00", category: "Category 3" },
-      { id: 4, name: "Product 4", price: "$70.00", category: "Category 4" },
-      { id: 5, name: "Product 5", price: "$450.00", category: "Category 5" },
-      { id: 6, name: "Product 6", price: "$950.00", category: "Category 6" },
-      { id: 7, name: "Product 7", price: "$550.00", category: "Category 7" },
-      { id: 8, name: "Product 8", price: "$750.00", category: "Category 8" },
-      { id: 9, name: "Product 6", price: "$950.00", category: "Category 6" },
-      { id: 10, name: "Product 7", price: "$550.00", category: "Category 7" },
-      { id: 11, name: "Product 8", price: "$750.00", category: "Category 8" }
+      { id: 1, name: "Товар 1", price: "4500 руб.", category: "Категория 1" },
+      { id: 2, name: "Товар 2", price: "13500 руб.", category: "Категория 2" },
+      { id: 3, name: "Товар 3", price: "22500 руб.", category: "Категория 3" },
+      { id: 4, name: "Товар 4", price: "6300 руб.", category: "Категория 4" },
+      { id: 5, name: "Товар 5", price: "40500 руб.", category: "Категория 5" },
+      { id: 6, name: "Товар 6", price: "85500 руб.", category: "Категория 6" },
+      { id: 7, name: "Товар 7", price: "49500 руб.", category: "Категория 7" },
+      { id: 8, name: "Товар 8", price: "67500 руб.", category: "Категория 8" },
+      { id: 9, name: "Товар 9", price: "85500 руб.", category: "Категория 6" },
+      { id: 10, name: "Товар 10", price: "49500 руб", category: "Категория 7" },
+      { id: 11, name: "Товар 11", price: "67500 руб.", category: "Категория 8" }
     ]
   },
   dashBoardPage: {
@@ -61,18 +61,18 @@ const data = {
       }
     ],
     monthlySales: [
-      { name: "Jan", uv: 3700 },
-      { name: "Feb", uv: 3000 },
-      { name: "Mar", uv: 2000 },
-      { name: "Apr", uv: 2780 },
-      { name: "May", uv: 2000 },
-      { name: "Jun", uv: 1800 },
-      { name: "Jul", uv: 2600 },
-      { name: "Aug", uv: 2900 },
-      { name: "Sep", uv: 3500 },
-      { name: "Oct", uv: 3000 },
-      { name: "Nov", uv: 2400 },
-      { name: "Dec", uv: 2780 }
+      { name: "Янв.", uv: 3700 },
+      { name: "Фев.", uv: 3000 },
+      { name: "Март", uv: 2000 },
+      { name: "Апр.", uv: 2780 },
+      { name: "Май", uv: 2000 },
+      { name: "Июнь", uv: 1800 },
+      { name: "Июль", uv: 2600 },
+      { name: "Авг.", uv: 2900 },
+      { name: "Сен.", uv: 3500 },
+      { name: "Окт.", uv: 3000 },
+      { name: "Ноя.", uv: 2400 },
+      { name: "Дек.", uv: 2780 }
     ],
     newOrders: [
       { pv: 2400 },
@@ -84,17 +84,17 @@ const data = {
       { pv: 4300 }
     ],
     browserUsage: [
-      { name: "Chrome", value: 800, color: cyan600, icon: <ExpandMore /> },
-      { name: "Firefox", value: 300, color: pink600, icon: <ChevronRight /> },
-      { name: "Safari", value: 300, color: purple600, icon: <ExpandLess /> }
+      { name: "Хром", value: 800, color: cyan600, icon: <ExpandMore /> },
+      { name: "Файерфокс", value: 300, color: pink600, icon: <ChevronRight /> },
+      { name: "Сафари", value: 300, color: purple600, icon: <ExpandLess /> }
     ],
     lineBarChart: [
-      { name: "Page A", uv: 590, pv: 800, amt: 1400 },
-      { name: "Page B", uv: 868, pv: 967, amt: 1506 },
-      { name: "Page C", uv: 1397, pv: 1098, amt: 989 },
-      { name: "Page D", uv: 1480, pv: 1200, amt: 1228 },
-      { name: "Page E", uv: 1520, pv: 1108, amt: 1100 },
-      { name: "Page F", uv: 1400, pv: 680, amt: 1700 }
+      { name: "Страница 1", uv: 590, pv: 800, amt: 1400 },
+      { name: "Страница 2", uv: 868, pv: 967, amt: 1506 },
+      { name: "Страница 3", uv: 1397, pv: 1098, amt: 989 },
+      { name: "Страница 4", uv: 1480, pv: 1200, amt: 1228 },
+      { name: "Страница 5", uv: 1520, pv: 1108, amt: 1100 },
+      { name: "Страница 6", uv: 1400, pv: 680, amt: 1700 }
     ]
   }
 };

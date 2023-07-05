@@ -22,7 +22,7 @@ const DeleteDialog: React.FC<DeleteDialogProps> = ({ open, closeDialog, dialogTi
   ];
 
   return (
-    <Dialog key="alert-dialog" title="Confirm Dialog " fullWidth maxWidth="xs" open={open} onClick={() => closeDialog(false)}>
+    <Dialog key="alert-dialog" title="Окно подтверждения " fullWidth maxWidth="xs" open={open} onClick={() => closeDialog(false)}>
       <DialogTitle key="alert-dialog-title">{title}</DialogTitle>
       <DialogContent key="alert-dialog-content">
         <DialogContentText key="alert-dialog-description">{text}</DialogContentText>

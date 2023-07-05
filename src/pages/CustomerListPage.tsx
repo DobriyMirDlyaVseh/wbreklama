@@ -40,12 +40,12 @@ const defaultProps = {
   ],
   headers: [
     "",
-    "First Name",
-    "Last Name",
-    "Email",
-    "Mobile",
-    "Membership",
-    "Actions",
+    "Имя",
+    "Фамилия",
+    "Почта",
+    "Мобильный телефон",
+    "Членство",
+    "Действия",
   ],
 };
 
@@ -222,8 +222,8 @@ class CustomerListPage extends React.Component<
 
     return (
       <PageBase
-        title={"Customers (" + customerList.length + ")"}
-        navigation="React CRM / Customer"
+        title={"Заказчики (" + customerList.length + ")"}
+        navigation="ЦРМ / Заказчик"
       >
         {isFetching ? (
           <div>
@@ -232,7 +232,7 @@ class CustomerListPage extends React.Component<
         ) : (
           <div>
             <div>
-              <Tooltip title="Add" aria-label="add">
+              <Tooltip title="Добавить" aria-label="add">
                 <Fab
                   size="small"
                   color="secondary"
@@ -242,7 +242,7 @@ class CustomerListPage extends React.Component<
                   <ContentAdd />
                 </Fab>
               </Tooltip>
-              <Tooltip title="Search" aria-label="search">
+              <Tooltip title="Поиск" aria-label="search">
                 <Fab
                   size="small"
                   style={styles.fabSearch}
@@ -258,7 +258,7 @@ class CustomerListPage extends React.Component<
               onClose={this.onSnackBarClose}
             >
               <Alert onClose={this.onSnackBarClose} severity="success">
-                The operation completed successfully !
+                Операция успешно завершена !
               </Alert>
             </Snackbar>
             <DataTable
@@ -290,9 +290,9 @@ class CustomerListPage extends React.Component<
                   </Grid>
                   <Grid item xs={12} style={styles.searchField}>
                     <TextField
-                      placeholder="First Name"
-                      label="First Name"
-                      name="firstname"
+                      placeholder="Имя"
+                      label="Имя"
+                      name="имя"
                       fullWidth={true}
                       value={this.state.search.contain.firstname}
                       onChange={this.handleSearchFilter}
@@ -300,10 +300,10 @@ class CustomerListPage extends React.Component<
                   </Grid>
                   <Grid item xs={12} style={styles.searchField}>
                     <TextField
-                      placeholder="Last Name"
-                      label="Last Name"
+                      placeholder="Фамилия"
+                      label="Фамилия"
                       fullWidth={true}
-                      name="lastname"
+                      name="фамилия"
                       value={this.state.search.contain.lastname}
                       onChange={this.handleSearchFilter}
                     />

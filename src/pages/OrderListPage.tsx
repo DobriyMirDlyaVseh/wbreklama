@@ -34,13 +34,13 @@ const defaultProps = {
     "actions",
   ],
   headers: [
-    "Reference",
-    "Quantity",
-    "Amount",
-    "Customer",
-    "Order Date",
-    "Shipping Date",
-    "Actions",
+    "Ссылка",
+    "Количество",
+    "Cумма",
+    "Заказчик",
+    "Дата заказа",
+    "Дата отгрузки",
+    "Действия",
   ],
 };
 
@@ -222,8 +222,8 @@ class OrderListPage extends React.Component<OrderListProps, OrderListState> {
 
     return (
       <PageBase
-        title={"Orders (" + orderList.length + ")"}
-        navigation="React CRM / Order"
+        title={"Заказы (" + orderList.length + ")"}
+        navigation="ЦРМ / Заказ"
       >
         {isFetching ? (
           <div>
@@ -254,7 +254,7 @@ class OrderListPage extends React.Component<OrderListProps, OrderListState> {
               onClose={this.onSnackBarClose}
             >
               <Alert onClose={this.onSnackBarClose} severity="success">
-                The operation completed successfully !
+                Операция успешно завершена !
               </Alert>
             </Snackbar>
             <DataTable
@@ -286,9 +286,9 @@ class OrderListPage extends React.Component<OrderListProps, OrderListState> {
                 <Grid item xs={12} style={styles.searchField}>
                   <TextField
                     // placeholder="Order Reference"
-                    label="Order Reference"
+                    label="Ссылка на заказ"
                     fullWidth={true}
-                    name="reference"
+                    name="ссылка"
                     value={this.state.search.contain.reference}
                     onChange={this.handleSearchFilter}
                   />

@@ -28,11 +28,10 @@ const styles = {
 const AboutPage: React.FC = () => {
     return (
       <div style={styles.about}>
-        <div style={styles.title}><b>About</b></div>
-        <div style={styles.version}>WbReklama</div>
+        <div style={styles.title}><b>О</b></div>
+        <div style={styles.version}>Реклама</div>
         <div style={styles.desc}>
-          <p>This is an application for the personal account of advertising management for Wildberries.
-           </p>
+          <p>Это приложение для управления рекламой и любого бизнес-стартапа.</p>
         </div>
       </div>
     );
