@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/wbreklama/static/css/main.0307f654.chunk.css",
-    "main.js": "/wbreklama/static/js/main.ad4feb43.chunk.js",
-    "main.js.map": "/wbreklama/static/js/main.ad4feb43.chunk.js.map",
+    "main.js": "/wbreklama/static/js/main.2875273c.chunk.js",
+    "main.js.map": "/wbreklama/static/js/main.2875273c.chunk.js.map",
     "runtime-main.js": "/wbreklama/static/js/runtime-main.f68592dd.js",
     "runtime-main.js.map": "/wbreklama/static/js/runtime-main.f68592dd.js.map",
-    "static/js/2.83ad1242.chunk.js": "/wbreklama/static/js/2.83ad1242.chunk.js",
-    "static/js/2.83ad1242.chunk.js.map": "/wbreklama/static/js/2.83ad1242.chunk.js.map",
+    "static/js/2.83142cc1.chunk.js": "/wbreklama/static/js/2.83142cc1.chunk.js",
+    "static/js/2.83142cc1.chunk.js.map": "/wbreklama/static/js/2.83142cc1.chunk.js.map",
     "index.html": "/wbreklama/index.html",
-    "precache-manifest.caabd31967c6cd4d931350c8f2f23707.js": "/wbreklama/precache-manifest.caabd31967c6cd4d931350c8f2f23707.js",
+    "precache-manifest.d35497b1627668a7d5cdd037591dffdf.js": "/wbreklama/precache-manifest.d35497b1627668a7d5cdd037591dffdf.js",
     "service-worker.js": "/wbreklama/service-worker.js",
     "static/css/main.0307f654.chunk.css.map": "/wbreklama/static/css/main.0307f654.chunk.css.map",
-    "static/js/2.83ad1242.chunk.js.LICENSE.txt": "/wbreklama/static/js/2.83ad1242.chunk.js.LICENSE.txt",
+    "static/js/2.83142cc1.chunk.js.LICENSE.txt": "/wbreklama/static/js/2.83142cc1.chunk.js.LICENSE.txt",
     "static/media/avatar0.png": "/wbreklama/static/media/avatar0.edfa71c3.png",
     "static/media/favicon.ico": "/wbreklama/static/media/favicon.dcc81d27.ico"
   },
   "entrypoints": [
     "static/js/runtime-main.f68592dd.js",
-    "static/js/2.83ad1242.chunk.js",
+    "static/js/2.83142cc1.chunk.js",
     "static/css/main.0307f654.chunk.css",
-    "static/js/main.ad4feb43.chunk.js"
+    "static/js/main.2875273c.chunk.js"
   ]
 }
